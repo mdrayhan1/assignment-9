@@ -2,6 +2,8 @@ import React from "react";
 import Option from "../Option/Option";
 import Swal from "sweetalert2";
 
+
+// show quiz questioins and ans
 const Singlequiz = ({ questionData }) => {
   console.log(questionData);
   const { correctAnswer, options, question } = questionData;
