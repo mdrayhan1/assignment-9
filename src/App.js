@@ -7,7 +7,7 @@ import Blog from "./components/Blog/Blog";
 import Quiz from "./components/Quiz/Quiz";
 import Statistic from "./components/Statistic/Statistic";
 
-
+// routing
 function App() {
   const router = createBrowserRouter([
     {
