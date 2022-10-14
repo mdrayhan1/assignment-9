@@ -47,7 +47,6 @@ const Navbar = () => {
             </li>
           </ul>
           <Link 
-          // to={"/quizdata/:quizId"}
           >
             <button className="flex justify-end p-4 md:hidden">
               <svg
