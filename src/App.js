@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Main from "./layouts/Main";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Blog from "./components/Blog/Blog";
+import Quiz from "./components/Quiz/Quiz";
+import Statistic from "./components/Statistic/Statistic";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main></Main>,
+      children: [
+        {
+          path: "/",
+          element: <Home></Home>,
+          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+        },
+
+        {
+          path: "/statistic",
+          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+
+          element: <Statistic></Statistic>,
+        },
+        {
+          path: "/blog",
+          element: <Blog></Blog>,
+        },
+        {
+          path: "/quizdata/:quizId",
+          loader: ({ params }) =>
+            fetch(
+              `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
+            ),
+          element: <Quiz></Quiz>,
+        },
+      ],
+    },
+    { path: "*", element: <div>This Route Not Found: 404</div> },
+  ]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
