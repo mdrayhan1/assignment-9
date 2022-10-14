@@ -1,3 +1,4 @@
+// import
 import "./App.css";
 import Main from "./layouts/Main";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -5,6 +6,7 @@ import Home from "./components/Home/Home";
 import Blog from "./components/Blog/Blog";
 import Quiz from "./components/Quiz/Quiz";
 import Statistic from "./components/Statistic/Statistic";
+
 
 function App() {
   const router = createBrowserRouter([
