@@ -17,6 +17,7 @@ Quiz chart displaying total questions of each topic.
 
 ### `Blog page`
 
+The blog page shows 3 questions and answers. which is part of learning javascript.
 
 
 
