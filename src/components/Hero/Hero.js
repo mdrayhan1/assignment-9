@@ -10,7 +10,10 @@ const Hero = () => {
       <div className="w-full">
         <p className="py-6 w-full">
           In this article we'll talk about the definition of a quiz. A quiz can
-          be defined as a game or brain teaser to test knowledge.
+          be defined as a game or brain teaser to test knowledge. It can contain
+          an element of competition when participants play against each other to
+          get the highest score, which makes helps participants become more
+          engaged.
         </p>
       </div>
     </div>
